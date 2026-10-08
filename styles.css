@@ -1,0 +1,43 @@
+/* Sitio de Golia: misma marca que la app (docs/MARCA.md). Claro y oscuro automático. */
+:root {
+  --primary: #2D6BFF; --spark: #FFC93C; --navy: #0A1A3A;
+  --bg: #F5F7FC; --surface: #FFFFFF; --text: #0A1A3A; --muted: #5B6478; --line: #E3E8F2; --link: #2D6BFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #071226; --surface: #0F1F44; --text: #EAF0FF; --muted: #9AA7C7; --line: #1E2F59; --link: #6B95FF; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 500; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); font-weight: 600; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header.site { border-bottom: 1px solid var(--line); background: var(--surface); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+header.site img { height: 30px; display: block; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; margin-left: 16px; white-space: nowrap; }
+nav a:hover { color: var(--text); }
+main { padding: 40px 0 64px; }
+h1 { font-family: Nunito, sans-serif; font-weight: 900; font-size: 34px; line-height: 1.15; margin-bottom: 8px; }
+h2 { font-family: Nunito, sans-serif; font-weight: 800; font-size: 21px; margin: 32px 0 8px; }
+h3 { font-size: 16px; margin: 20px 0 6px; }
+p, li { color: var(--text); font-size: 15px; }
+p + p { margin-top: 10px; }
+ul, ol { padding-left: 22px; margin: 8px 0; }
+li + li { margin-top: 4px; }
+.updated { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.note { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--spark); border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+.todo { background: rgba(255, 201, 60, .25); border-radius: 4px; padding: 0 4px; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; background: var(--surface); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 700; }
+footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 13px; }
+footer a { color: var(--muted); margin-right: 14px; }
+/* Inicio */
+.hero { text-align: center; padding: 32px 0 8px; }
+.hero h1 { font-size: 40px; max-width: 620px; margin: 16px auto 12px; }
+.hero p { color: var(--muted); font-size: 17px; }
+.badge { display: inline-block; margin-top: 24px; background: var(--primary); color: #FFF; font-weight: 700; padding: 12px 22px; border-radius: 999px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+.feature { background: var(--surface); border-radius: 16px; padding: 18px; }
+.feature b { display: block; font-size: 16px; margin-bottom: 4px; }
+.feature span { color: var(--muted); font-size: 14px; }
+@media (max-width: 520px) { h1, .hero h1 { font-size: 28px; } header.site img { height: 24px; } nav a { margin-left: 10px; font-size: 12.5px; } }
